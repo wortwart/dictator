@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo App: Dictator</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Demo App: Dictator</h1>
+	<form action="#">
+		<fieldset id="textSection">
+			<button id="audioSectionBtn"></button>
+			<button id="cameraSectionBtn"></button>
+			<label>
+				Language:
+				<select id="languageOptions">
+					<option value="en-GB">English (GB)</option>
+					<option value="en-US">English (US)</option>
+					<option value="fr-FR">French</option>
+					<option value="de-DE" selected>German</option>
+					<option value="it-IT">Italian</option>
+					<option value="es-ES">Spanish</option>
+				</select>
+			</label>
+			<legend>Text input</legend>
+			<textarea></textarea>
+			<p class="buttonbar">
+				<button id="requestSpellcheckBtn">Spell Check</button>
+				<button id="requestAnalysisBtn">Analyze Text</button>
+				<button id="saveBtn">Save Post</button>
+			</p>
+		</fieldset>
+
+		<fieldset id="audioSection">
+			<legend>Speech Recognition</legend>
+			<label>
+				Mode:
+				<select id="recognitionModes">
+					<option value="0">Interactive</option>
+					<option value="1">Conversation</option>
+					<option value="2" selected>Dictation</option>
+				</select>
+			</label>
+			<label>
+				Format:
+				<select id="formatOptions">
+					<option value="Simple">Simple Result</option>
+					<option value="Detailed" selected>Detailed Result</option>
+				</select>
+			</label>
+			<label>
+				Profanity:
+				<select id="profanityOptions">
+					<option value="raw" selected>Raw</option>
+					<option value="masked">Masked</option>
+					<option value="removed">Removed</option>
+				</select>
+				(not working)
+			</label>
+			<button id="startAudioBtn" disabled>Start Recording</button>
+			<button id="stopAudioBtn" disabled>Stop Recording</button>
+		</fieldset>
+
+		<fieldset id="transcriptionSection"></fieldset>
+
+		<fieldset id="spellcheckSection"></fieldset>
+
+		<fieldset id="analysisSection"></fieldset>
+
+		<fieldset id="cameraSection">
+			<legend>Camera Image</legend>
+			<video controls autoplay></video>
+			<canvas></canvas>
+			<img>
+			<p>
+				<button id="captureBtn">Smile! (Or don't.)</button>
+				<button id="requestEmotionBtn" disabled>Detect Emotion</button>
+			</p>
+		</fieldset>
+
+		<fieldset id="emotionSection"></fieldset>
+	</form>
+
+	<div id="currentStateDiv">
+		<p id="hypothesisEl"></p>
+		<p>Current status: <span id="statusSpan"></span></p>
+	</div>
+
+	<script src="../node_modules/requirejs/require.js"></script>
+	<script src="../node_modules/microsoft-speech-browser-sdk/distrib/speech.browser.sdk.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

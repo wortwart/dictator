@@ -1,0 +1,93 @@
+body {
+	font-family: sans-serif;
+	margin-bottom: 5em;
+}
+
+fieldset {
+	margin: 1em 0;
+	padding: 1em;
+	border: none;
+	border-radius: .5em;
+	box-shadow: .3em .3em 5px #ccc;
+}
+
+fieldset:nth-of-type(1) {
+	background-color: #FFFFEF;
+}
+fieldset:nth-of-type(2) {
+	background-color: #F2F2CE;
+}
+fieldset:nth-of-type(3) {
+	background-color: #D0D6B3;
+}
+fieldset:nth-of-type(4) {
+	background-color: #CCCC99;
+}
+fieldset:nth-of-type(5) {
+	background-color: #ACAC6E;
+}
+fieldset:nth-of-type(6) {
+	background-color: #AAAE7F;
+}
+fieldset:nth-of-type(7) {
+	background-color: #898949;
+}
+#textarea, button {
+	background-color: #F2F2CE;
+	border-radius: .25em;
+}
+
+legend {
+	font-weight: bold;
+}
+
+label {
+	display: block;
+	margin: 1em 0;
+}
+
+video {
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+}
+
+canvas {
+	display: none;
+	width: 300px;
+	height: 300px;
+	margin: 0 1em;
+}
+
+#currentStateDiv {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	min-height: 3em;
+	width: calc(100vw - 2em);
+	margin: 0;
+	padding: .5em 1em;
+	font-family: monospace;
+	background-color: #71712A;
+	box-shadow: 0 -.3em 5px #CCC;
+}
+#currentStateDiv p {
+	margin: 0;
+}
+
+#audioSection, #cameraSection, #transcriptionSection, #spellcheckSection, #analysisSection, #emotionSection {
+	display: none;
+	margin: 1em 0;
+	padding: 1em;
+}
+
+textarea {
+	display: block;
+	width: 32em;
+	height: 8em;
+	margin: 0 auto;
+}
+
+.buttonbar {
+	text-align: center;
+}

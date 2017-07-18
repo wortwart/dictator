@@ -1,0 +1,21 @@
+{
+  "name": "dictator",
+  "version": "1.0.0",
+  "description": "Speech Recognition as Sample App for Microsoft Cognitive Services",
+  "main": "index.html",
+  "dependencies": {
+    "microsoft-speech-browser-sdk": "0.0.3",
+    "requirejs": "^2.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AI",
+    "Machine Learning",
+    "Azure"
+  ],
+  "author": "Herbert Braun",
+  "license": "ISC"
+}
